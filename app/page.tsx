@@ -13,7 +13,7 @@ export default function Home() {
       link: "#",
     },
     {
-      name: "Invok Data",
+      name: "Mediaberg",
       desc: "Analytics and data intelligence platform built for better decisions and measurable growth.",
       status: "In Development",
       link: "#",
@@ -263,7 +263,7 @@ export default function Home() {
               </li>
               <li>
                 <a href="#" className="transition hover:text-white">
-                  Invok Data
+                  Mediaberg
                 </a>
               </li>
             </ul>
