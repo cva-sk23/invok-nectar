@@ -96,8 +96,8 @@ export default function Home() {
           {/* Dashboard mockup */}
           <div className="rounded-2xl border border-slate-200 bg-slate-50 p-8 shadow-sm">
             <div className="grid grid-cols-3 gap-3">
-              <Metric title="Users" value="128K" />
-              <Metric title="Clients" value="500+" />
+              <Metric title="SEO Pages" value="60+" />
+              <Metric title="Clients" value="B2C" />
               <Metric title="Success" value="92%" />
             </div>
 
