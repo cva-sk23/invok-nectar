@@ -14,7 +14,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Invok Nectar | Technology with a Human Pulse",
-  description: "Invok Nectar builds practical digital platforms across finance, AI, operations, analytics and growth.",
+  description:
+    "Invok Nectar builds practical digital platforms across finance, AI, operations, analytics, and growth.",
+  metadataBase: new URL("https://invoknectar.com"),
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({
