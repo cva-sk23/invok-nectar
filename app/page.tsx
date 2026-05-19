@@ -5,25 +5,29 @@ export default function Home() {
   const products = [
     {
       name: "GOresolve",
-      desc: "Consumer debt resolution platform helping individuals resolve unsecured debt stress with clarity, dignity and structure.",
+      desc:
+        "Consumer debt resolution platform helping individuals resolve unsecured debt stress with clarity, dignity and structure.",
       status: "Live Product",
       link: "https://goresolve.in",
     },
     {
       name: "PursuerAI",
-      desc: "Smart CRM and workflow platform designed for collections teams and performance-led operations.",
+      desc:
+        "Operational CRM and workflow automation platform for collections and advisory teams.",
       status: "Request Access",
       link: "/products/pursuerai",
     },
     {
       name: "Mediaberg",
-      desc: "Analytics and data intelligence platform built for better decisions and measurable growth.",
+      desc:
+        "Analytics and data intelligence platform built for better decisions and measurable growth.",
       status: "In Development",
       link: "#",
     },
     {
       name: "Nectar Growth",
-      desc: "Growth systems and marketing intelligence tools built for modern digital businesses.",
+      desc:
+        "Growth systems and marketing intelligence tools built for modern digital businesses.",
       status: "Planned",
       link: "#",
     },
@@ -31,7 +35,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
-      {/* Navbar */}
+      {/* Header */}
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <div className="leading-tight">
@@ -43,34 +47,36 @@ export default function Home() {
             </div>
           </div>
 
-         
-  <nav className="hidden gap-8 text-[15px] font-medium text-slate-700 md:flex">
-    <a href="#" className="transition hover:text-slate-900">
-        Home
-       </a>
-       <a href="#products" className="transition hover:text-slate-900">
-       Products
-       </a>
-       <a href="#about" className="transition hover:text-slate-900">
-       About Us
-       </a>
-       <a href="#services" className="transition hover:text-slate-900">
-       Services
-       </a>
-       <a href="/careers" className="transition hover:text-slate-900">
-       Careers
-       </a>
-       <a href="/blog" className="transition hover:text-slate-900">
-       Blog
-       </a>
-       <a href="#contact" className="transition hover:text-slate-900">
-       Contact
-      </a>
-    </nav>
+          <nav className="hidden gap-8 text-[15px] font-medium text-slate-700 md:flex">
+            <a href="/" className="transition hover:text-slate-900">
+              Home
+            </a>
+            <a href="#products" className="transition hover:text-slate-900">
+              Products
+            </a>
+            <a href="#about" className="transition hover:text-slate-900">
+              About Us
+            </a>
+            <a href="#services" className="transition hover:text-slate-900">
+              Services
+            </a>
+            <a href="/careers" className="transition hover:text-slate-900">
+              Careers
+            </a>
+            <a href="/blog" className="transition hover:text-slate-900">
+              Blog
+            </a>
+            <a href="#contact" className="transition hover:text-slate-900">
+              Contact
+            </a>
+          </nav>
 
-          <button className="rounded-lg bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800">
+          <a
+            href="#contact"
+            className="rounded-lg bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-800"
+          >
             Get In Touch
-          </button>
+          </a>
         </div>
       </header>
 
@@ -94,13 +100,19 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
-              <button className="rounded-lg bg-slate-900 px-7 py-3 text-base font-semibold text-white transition hover:bg-slate-800">
+              <a
+                href="#products"
+                className="rounded-lg bg-slate-900 px-7 py-3 text-base font-semibold text-white transition hover:bg-slate-800"
+              >
                 Explore Products
-              </button>
+              </a>
 
-              <button className="rounded-lg border border-slate-300 px-7 py-3 text-base font-semibold text-slate-900 transition hover:bg-slate-50">
+              <a
+                href="#contact"
+                className="rounded-lg border border-slate-300 px-7 py-3 text-base font-semibold text-slate-900 transition hover:bg-slate-50"
+              >
                 Partner With Us
-              </button>
+              </a>
             </div>
 
             <p className="mt-8 text-sm text-slate-500">
@@ -153,63 +165,73 @@ export default function Home() {
           </div>
 
           <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {products.map((item) => (
-              <div
-                key={item.name}
-                className={`group flex flex-col rounded-lg border transition-all ${
-                  item.name === "GOresolve"
-                    ? "border-emerald-300 bg-emerald-50 shadow-md hover:shadow-lg"
-                    : "border-slate-200 bg-white shadow-sm hover:shadow-md hover:border-slate-300"
-                } p-6`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-lg font-semibold text-slate-900">
-                    {item.name}
-                  </h3>
-                  <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                    {item.status}
-                  </span>
-                </div>
+            {products.map((item) => {
+              const isExternal = item.link.startsWith("http");
 
-                <p className="mt-4 flex-1 text-sm leading-6 text-slate-600">
-                  {item.desc}
-                </p>
-
-                <a
-                  href={item.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mt-6 inline-block text-sm font-semibold transition ${
+              return (
+                <div
+                  key={item.name}
+                  className={`group flex flex-col rounded-lg border transition-all ${
                     item.name === "GOresolve"
-                      ? "text-emerald-700 hover:text-emerald-800"
-                      : "text-blue-600 hover:text-blue-800"
-                  }`}
+                      ? "border-emerald-300 bg-emerald-50 shadow-md hover:shadow-lg"
+                      : "border-slate-200 bg-white shadow-sm hover:border-slate-300 hover:shadow-md"
+                  } p-6`}
                 >
-                  {item.name === "GOresolve" ? "Visit Platform" : "Learn More"}{" "}
-                  →
-                </a>
-              </div>
-            ))}
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-lg font-semibold text-slate-900">
+                      {item.name}
+                    </h3>
+                    <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                      {item.status}
+                    </span>
+                  </div>
+
+                  <p className="mt-4 flex-1 text-sm leading-6 text-slate-600">
+                    {item.desc}
+                  </p>
+
+                  <a
+                    href={item.link}
+                    {...(isExternal
+                      ? {
+                          target: "_blank",
+                          rel: "noopener noreferrer",
+                        }
+                      : {})}
+                    className={`mt-6 inline-block text-sm font-semibold transition ${
+                      item.name === "GOresolve"
+                        ? "text-emerald-700 hover:text-emerald-800"
+                        : "text-blue-600 hover:text-blue-800"
+                    }`}
+                  >
+                    {item.name === "GOresolve"
+                      ? "Visit Platform"
+                      : "Learn More"}{" "}
+                    →
+                  </a>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About */}
       <AboutSection />
 
-      {/* Services Section */}
+      {/* Services */}
       <ServicesSection />
 
-      {/* Stats */}
+      {/* Positioning Stats */}
       <section className="bg-slate-50 py-24">
-         <div className="mx-auto max-w-7xl px-6 lg:px-10">
-           <div className="grid gap-12 text-center md:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+          <div className="grid gap-12 text-center md:grid-cols-2 lg:grid-cols-4">
             <Stat value="Finance" label="Core Domain" />
             <Stat value="AI" label="Applied Solutions" />
             <Stat value="Growth" label="Digital Focus" />
             <Stat value="Practical" label="Execution Philosophy" />
-           </div>
-         </div>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}
@@ -231,19 +253,29 @@ export default function Home() {
               <li>
                 <a
                   href="https://goresolve.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition hover:text-white"
                 >
                   GOresolve
                 </a>
               </li>
               <li>
-                <a href="#" className="transition hover:text-white">
+                <a
+                  href="/products/pursuerai"
+                  className="transition hover:text-white"
+                >
                   PursuerAI
                 </a>
               </li>
               <li>
                 <a href="#" className="transition hover:text-white">
                   Mediaberg
+                </a>
+              </li>
+              <li>
+                <a href="#" className="transition hover:text-white">
+                  Nectar Growth
                 </a>
               </li>
             </ul>
@@ -259,7 +291,7 @@ export default function Home() {
               </li>
               <li>
                 <a href="/careers" className="transition hover:text-white">
-                 Careers
+                  Careers
                 </a>
               </li>
               <li>
@@ -294,7 +326,13 @@ export default function Home() {
   );
 }
 
-function Metric({ title, value }: { title: string; value: string }) {
+function Metric({
+  title,
+  value,
+}: {
+  title: string;
+  value: string;
+}) {
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-4">
       <p className="text-xs font-semibold text-slate-500">{title}</p>
@@ -303,7 +341,13 @@ function Metric({ title, value }: { title: string; value: string }) {
   );
 }
 
-function Stat({ value, label }: { value: string; label: string }) {
+function Stat({
+  value,
+  label,
+}: {
+  value: string;
+  label: string;
+}) {
   return (
     <div>
       <div className="text-3xl font-semibold text-blue-600">{value}</div>
