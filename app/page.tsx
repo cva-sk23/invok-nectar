@@ -226,7 +226,7 @@ export default function Home() {
       <section className="bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="grid gap-12 text-center md:grid-cols-2 lg:grid-cols-4">
-            <Stat value="Finance" label="Core Domain" />
+            <Stat value="Fintech" label="Core Domain" />
             <Stat value="AI" label="Applied Solutions" />
             <Stat value="Growth" label="Digital Focus" />
             <Stat value="Practical" label="Execution Philosophy" />
