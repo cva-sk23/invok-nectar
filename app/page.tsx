@@ -12,8 +12,8 @@ export default function Home() {
     {
       name: "PursuerAI",
       desc: "Smart CRM and workflow platform designed for collections teams and performance-led operations.",
-      status: "Coming Soon",
-      link: "#",
+      status: "Request Access",
+      link: "/products/pursuerai",
     },
     {
       name: "Mediaberg",
