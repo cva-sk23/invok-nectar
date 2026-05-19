@@ -1,33 +1,61 @@
+import type { Metadata } from "next";
 import { AboutSection } from "@/components/sections/about-section";
 import { ServicesSection } from "@/components/sections/services-section";
 
+export const metadata: Metadata = {
+  title: "Invok Nectar | Technology with a Human Pulse",
+  description:
+    "Invok Nectar creates practical software platforms that help businesses operate smarter and consumers solve real financial problems. DPIIT-recognized data science company based in India.",
+  alternates: {
+    canonical: "https://invoknectar.com",
+  },
+  openGraph: {
+    title: "Invok Nectar | Technology with a Human Pulse",
+    description:
+      "Practical digital platforms across finance, AI, operations and growth.",
+    url: "https://invoknectar.com",
+    type: "website",
+  },
+};
+
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Invok Nectar Private Limited",
+    url: "https://invoknectar.com",
+    description:
+      "DPIIT-recognized data science company building practical digital platforms for finance, AI and operations.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      email: "hello@invoknectar.com",
+    },
+    sameAs: ["https://goresolve.in"],
+  };
+
   const products = [
     {
       name: "GOresolve",
-      desc:
-        "Consumer debt resolution platform helping individuals resolve unsecured debt stress with clarity, dignity and structure.",
+      desc: "Consumer debt resolution platform helping individuals resolve unsecured debt stress with clarity, dignity and structure.",
       status: "Live Product",
       link: "https://goresolve.in",
     },
     {
       name: "PursuerAI",
-      desc:
-        "Operational CRM and workflow automation platform for collections and advisory teams.",
+      desc: "Operational CRM and workflow automation platform for collections and advisory teams.",
       status: "Request Access",
       link: "/products/pursuerai",
     },
     {
       name: "Mediaberg",
-      desc:
-        "Analytics and data intelligence platform built for better decisions and measurable growth.",
+      desc: "Analytics and data intelligence platform built for better decisions and measurable growth.",
       status: "In Development",
       link: "#",
     },
     {
       name: "Nectar Growth",
-      desc:
-        "Growth systems and marketing intelligence tools built for modern digital businesses.",
+      desc: "Growth systems and marketing intelligence tools built for modern digital businesses.",
       status: "Planned",
       link: "#",
     },
@@ -35,7 +63,11 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-slate-900">
-     
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className="bg-white">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-24 lg:grid-cols-2 lg:px-10 lg:py-32">
@@ -149,10 +181,7 @@ export default function Home() {
                   <a
                     href={item.link}
                     {...(isExternal
-                      ? {
-                          target: "_blank",
-                          rel: "noopener noreferrer",
-                        }
+                      ? { target: "_blank", rel: "noopener noreferrer" }
                       : {})}
                     className={`mt-6 inline-block text-sm font-semibold transition ${
                       item.name === "GOresolve"
@@ -160,9 +189,7 @@ export default function Home() {
                         : "text-blue-600 hover:text-blue-800"
                     }`}
                   >
-                    {item.name === "GOresolve"
-                      ? "Visit Platform"
-                      : "Learn More"}{" "}
+                    {item.name === "GOresolve" ? "Visit Platform" : "Learn More"}{" "}
                     →
                   </a>
                 </div>
@@ -189,18 +216,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-          </main>
+    </main>
   );
 }
 
-function Metric({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
+function Metric({ title, value }: { title: string; value: string }) {
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-4">
       <p className="text-xs font-semibold text-slate-500">{title}</p>
@@ -209,13 +229,7 @@ function Metric({
   );
 }
 
-function Stat({
-  value,
-  label,
-}: {
-  value: string;
-  label: string;
-}) {
+function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
       <div className="text-3xl font-semibold text-blue-600">{value}</div>
