@@ -1,6 +1,6 @@
 export const stats = [
   {
-    value: "1 Live",
+    value: "2 Live",
     label: "Active Product",
   },
   {
