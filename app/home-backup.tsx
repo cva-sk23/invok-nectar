@@ -1,14 +1,5 @@
-import { AboutSection } from '@/components/sections/about-section';
-import { ServicesSection } from '@/components/sections/services-section';
-
-export default function HomePage() {
-  return (
-    <main>
-      <AboutSection />
-      <ServicesSection />
-    </main>
-  );
-}
+import { AboutSection } from "@/components/sections/about-section";
+import { ServicesSection } from "@/components/sections/services-section";
 
 export default function Home() {
   const products = [
@@ -183,74 +174,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Us */}
-      <section id="about" className="bg-white py-24">
-        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-2 lg:px-10">
-          {/* Left */}
-          <div>
-            <p className="text-sm font-semibold tracking-wide text-amber-600">WHO WE ARE</p>
-
-            <h2 className="mt-5 text-3xl font-semibold leading-[1.25] tracking-tight text-slate-900 md:text-4xl">
-              Building Practical Technology With Long-Term Vision
-            </h2>
-
-            <p className="mt-7 text-base leading-8 text-slate-600 md:text-lg">
-              Invok Nectar is a technology company focused on building practical platforms across finance, operations, AI and digital growth.
-            </p>
-
-            <p className="mt-5 text-base leading-8 text-slate-600 md:text-lg">
-              We combine execution speed, market understanding and product discipline to create systems that deliver measurable outcomes.
-            </p>
-
-            <div className="mt-10 grid grid-cols-3 gap-4">
-              <div className="rounded-lg border border-slate-200 bg-white p-5">
-                <p className="text-lg font-semibold text-slate-900">1 Live</p>
-                <p className="mt-1 text-sm text-slate-600">Active Product</p>
-              </div>
-
-              <div className="rounded-lg border border-slate-200 bg-white p-5">
-                <p className="text-lg font-semibold text-slate-900">3+</p>
-                <p className="mt-1 text-sm text-slate-600">Platforms in Pipeline</p>
-              </div>
-
-              <div className="rounded-lg border border-slate-200 bg-white p-5">
-                <p className="text-lg font-semibold text-slate-900">Global</p>
-                <p className="mt-1 text-sm text-slate-600">Scale Ambition</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right */}
-          <div className="grid gap-5">
-            <div className="rounded-lg border border-slate-200 bg-white p-6">
-              <h3 className="text-base font-semibold text-slate-900">Problem First</h3>
-              <p className="mt-3 text-slate-600">We focus on painful real problems before building software.</p>
-            </div>
-
-            <div className="rounded-lg border border-slate-200 bg-white p-6">
-              <h3 className="text-base font-semibold text-slate-900">Execution Driven</h3>
-              <p className="mt-3 text-slate-600">Fast launches, lean systems and measurable progress.</p>
-            </div>
-
-            <div className="rounded-lg border border-slate-200 bg-white p-6">
-              <h3 className="text-base font-semibold text-slate-900">Technology with a Human Pulse</h3>
-              <p className="mt-3 text-slate-600">Intelligent platforms built with trust, clarity and usability.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="bg-slate-50 py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="grid gap-12 text-center md:grid-cols-2 lg:grid-cols-4">
-            <Stat value="1M+" label="Users Empowered" />
-            <Stat value="500+" label="Business Clients" />
-            <Stat value="10M+" label="Resolutions Processed" />
-            <Stat value="Growing" label="Across India & Beyond" />
-          </div>
-        </div>
-      </section>
+      <ServicesSection />
+      <AboutSection />
 
       {/* Footer */}
       <footer id="contact" className="bg-slate-950 text-slate-400">
