@@ -25,11 +25,6 @@ export const services = [
       "Practical AI tools that automate tasks and improve business efficiency.",
   },
   {
-    title: "Power BI Dashboards",
-    description:
-      "Interactive dashboards that transform raw data into actionable insights.",
-  },
-  {
     title: "Business Automation",
     description:
       "Workflow automation systems that reduce manual effort and save time.",
