@@ -35,8 +35,12 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
           <div className="leading-tight">
-            <div className="text-lg font-semibold tracking-tight">INVOK NECTAR</div>
-            <div className="mt-1 text-xs font-medium text-slate-500">Technology with a Human Pulse</div>
+            <div className="text-lg font-semibold tracking-tight">
+              INVOK NECTAR
+            </div>
+            <div className="mt-1 text-xs font-medium text-slate-500">
+              Technology with a Human Pulse
+            </div>
           </div>
 
           <nav className="hidden gap-8 text-[15px] font-medium text-slate-700 md:flex">
@@ -80,7 +84,9 @@ export default function Home() {
             </h1>
 
             <p className="mt-7 max-w-lg text-base leading-8 text-slate-600 md:text-lg">
-              Invok Nectar creates practical software platforms that help businesses operate smarter and consumers solve real financial problems.
+              Invok Nectar creates practical software platforms that help
+              businesses operate smarter and consumers solve real financial
+              problems.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:gap-4">
@@ -93,7 +99,9 @@ export default function Home() {
               </button>
             </div>
 
-            <p className="mt-8 text-sm text-slate-500">Built in India with systems designed to scale globally.</p>
+            <p className="mt-8 text-sm text-slate-500">
+              Built in India with systems designed to scale globally.
+            </p>
           </div>
 
           {/* Dashboard mockup */}
@@ -128,12 +136,15 @@ export default function Home() {
       <section id="products" className="bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-wide text-amber-600">OUR PRODUCTS</p>
+            <p className="text-sm font-semibold tracking-wide text-amber-600">
+              OUR PRODUCTS
+            </p>
             <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
               Platforms Solving Real Problems
             </h2>
             <p className="mt-4 text-base text-slate-600">
-              Focused platforms across consumer finance, business automation, analytics and growth.
+              Focused platforms across consumer finance, business automation,
+              analytics and growth.
             </p>
           </div>
 
@@ -148,13 +159,17 @@ export default function Home() {
                 } p-6`}
               >
                 <div className="flex items-start justify-between gap-3">
-                  <h3 className="text-lg font-semibold text-slate-900">{item.name}</h3>
+                  <h3 className="text-lg font-semibold text-slate-900">
+                    {item.name}
+                  </h3>
                   <span className="shrink-0 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
                     {item.status}
                   </span>
                 </div>
 
-                <p className="mt-4 flex-1 text-sm leading-6 text-slate-600">{item.desc}</p>
+                <p className="mt-4 flex-1 text-sm leading-6 text-slate-600">
+                  {item.desc}
+                </p>
 
                 <a
                   href={item.link}
@@ -166,7 +181,8 @@ export default function Home() {
                       : "text-blue-600 hover:text-blue-800"
                   }`}
                 >
-                  {item.name === "GOresolve" ? "Visit Platform" : "Learn More"} →
+                  {item.name === "GOresolve" ? "Visit Platform" : "Learn More"}{" "}
+                  →
                 </a>
               </div>
             ))}
@@ -181,15 +197,23 @@ export default function Home() {
       <footer id="contact" className="bg-slate-950 text-slate-400">
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-16 md:grid-cols-4 lg:px-10">
           <div>
-            <h3 className="text-sm font-semibold tracking-wide text-white">INVOK NECTAR</h3>
-            <p className="mt-4 text-sm leading-7">Technology with a Human Pulse. Building premium SaaS platforms across fintech, AI and operations.</p>
+            <h3 className="text-sm font-semibold tracking-wide text-white">
+              INVOK NECTAR
+            </h3>
+            <p className="mt-4 text-sm leading-7">
+              Technology with a Human Pulse. Building premium SaaS platforms
+              across fintech, AI and operations.
+            </p>
           </div>
 
           <div>
             <h4 className="text-sm font-semibold text-white">Products</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <a href="https://goresolve.in" className="transition hover:text-white">
+                <a
+                  href="https://goresolve.in"
+                  className="transition hover:text-white"
+                >
                   GOresolve
                 </a>
               </li>
@@ -231,7 +255,10 @@ export default function Home() {
             <h4 className="text-sm font-semibold text-white">Contact</h4>
             <ul className="mt-4 space-y-2 text-sm">
               <li>
-                <a href="mailto:hello@invoknectar.com" className="transition hover:text-white">
+                <a
+                  href="mailto:hello@invoknectar.com"
+                  className="transition hover:text-white"
+                >
                   hello@invoknectar.com
                 </a>
               </li>
@@ -248,13 +275,7 @@ export default function Home() {
   );
 }
 
-function Metric({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
+function Metric({ title, value }: { title: string; value: string }) {
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-4">
       <p className="text-xs font-semibold text-slate-500">{title}</p>
@@ -263,13 +284,7 @@ function Metric({
   );
 }
 
-function Stat({
-  value,
-  label,
-}: {
-  value: string;
-  label: string;
-}) {
+function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
       <div className="text-3xl font-semibold text-blue-600">{value}</div>

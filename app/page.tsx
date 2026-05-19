@@ -184,9 +184,7 @@ export default function Home() {
                       : "text-blue-600 hover:text-blue-800"
                   }`}
                 >
-                  {item.name === "GOresolve"
-                    ? "Visit Platform"
-                    : "Learn More"}{" "}
+                  {item.name === "GOresolve" ? "Visit Platform" : "Learn More"}{" "}
                   →
                 </a>
               </div>
@@ -295,13 +293,7 @@ export default function Home() {
   );
 }
 
-function Metric({
-  title,
-  value,
-}: {
-  title: string;
-  value: string;
-}) {
+function Metric({ title, value }: { title: string; value: string }) {
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-4">
       <p className="text-xs font-semibold text-slate-500">{title}</p>
@@ -310,13 +302,7 @@ function Metric({
   );
 }
 
-function Stat({
-  value,
-  label,
-}: {
-  value: string;
-  label: string;
-}) {
+function Stat({ value, label }: { value: string; label: string }) {
   return (
     <div>
       <div className="text-3xl font-semibold text-blue-600">{value}</div>

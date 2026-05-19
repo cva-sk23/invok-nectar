@@ -16,13 +16,11 @@ export const stats = [
 export const values = [
   {
     title: "Problem First",
-    description:
-      "We focus on painful real problems before building software.",
+    description: "We focus on painful real problems before building software.",
   },
   {
     title: "Execution Driven",
-    description:
-      "Fast launches, lean systems and measurable progress.",
+    description: "Fast launches, lean systems and measurable progress.",
   },
   {
     title: "Technology with a Human Pulse",

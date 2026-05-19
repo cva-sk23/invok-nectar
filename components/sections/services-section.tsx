@@ -1,5 +1,5 @@
-import { ServiceCard } from '@/components/ui/service-card';
-import { services } from '@/lib/services-data';
+import { ServiceCard } from "@/components/ui/service-card";
+import { services } from "@/lib/services-data";
 
 export function ServicesSection() {
   return (
@@ -10,13 +10,13 @@ export function ServicesSection() {
             What We Do
           </p>
 
-          <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
             Services Designed to Drive Business Growth
           </h2>
 
-          <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            We build practical digital solutions that help businesses establish
-            their online presence, generate leads and operate more efficiently.
+          <p className="mt-4 text-base leading-8 text-slate-600 md:text-lg">
+           We build practical digital solutions that help businesses establish
+           their online presence, generate leads and operate more efficiently.
           </p>
         </div>
 

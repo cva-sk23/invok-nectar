@@ -1,37 +1,37 @@
 export const services = [
   {
-    title: 'Custom Website Development',
+    title: "Custom Website Development",
     description:
-      'Modern, responsive websites built to showcase your brand and generate leads.',
+      "Modern, responsive websites built to showcase your brand and generate leads.",
   },
   {
-    title: 'CRM & ERP Development',
+    title: "CRM & ERP Development",
     description:
-      'Custom CRM and ERP systems that streamline operations, sales, collections and business workflows.',
+      "Custom CRM and ERP systems that streamline operations, sales, collections and business workflows.",
   },
   {
-    title: 'SEO & Content Marketing',
+    title: "SEO & Content Marketing",
     description:
-      'Search-optimized content and technical SEO strategies to improve visibility.',
+      "Search-optimized content and technical SEO strategies to improve visibility.",
   },
   {
-    title: 'Digital Marketing',
+    title: "Digital Marketing",
     description:
-      'Performance-driven campaigns across Google, Facebook and Instagram.',
+      "Performance-driven campaigns across Google, Facebook and Instagram.",
   },
   {
-    title: 'AI Solutions',
+    title: "AI Solutions",
     description:
-      'Practical AI tools that automate tasks and improve business efficiency.',
+      "Practical AI tools that automate tasks and improve business efficiency.",
   },
   {
-    title: 'Power BI Dashboards',
+    title: "Power BI Dashboards",
     description:
-      'Interactive dashboards that transform raw data into actionable insights.',
+      "Interactive dashboards that transform raw data into actionable insights.",
   },
   {
-    title: 'Business Automation',
+    title: "Business Automation",
     description:
-      'Workflow automation systems that reduce manual effort and save time.',
+      "Workflow automation systems that reduce manual effort and save time.",
   },
 ];

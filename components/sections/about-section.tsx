@@ -13,20 +13,17 @@ export function AboutSection() {
               Who We Are
             </p>
 
-            <h2 className="mt-6 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-              Building Practical Technology With Long-Term Vision
+            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-slate-900 md:text-4xl">
+             Building Practical Technology With Long-Term Vision
             </h2>
+            <p className="mt-6 text-base leading-8 text-slate-600 md:text-lg">
+             Invok Nectar is a technology company that builds custom websites,
+             digital marketing systems, AI solutions and practical software platforms.
+             </p>
 
-            <p className="mt-8 text-xl leading-relaxed text-slate-600">
-              Invok Nectar is a technology company that builds custom websites,
-              digital marketing systems, AI solutions and practical software
-              platforms.
-            </p>
-
-            <p className="mt-6 text-xl leading-relaxed text-slate-600">
-              We combine execution speed, market understanding and product
-              discipline to create systems that generate measurable business
-              outcomes.
+            <p className="mt-5 text-base leading-8 text-slate-600 md:text-lg">
+             We combine execution speed, market understanding and product discipline
+             to create systems that generate measurable business outcomes.
             </p>
 
             <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-3">
