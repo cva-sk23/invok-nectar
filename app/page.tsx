@@ -201,14 +201,14 @@ export default function Home() {
 
       {/* Stats */}
       <section className="bg-slate-50 py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-10">
-          <div className="grid gap-12 text-center md:grid-cols-2 lg:grid-cols-4">
-            <Stat value="1M+" label="Users Empowered" />
-            <Stat value="500+" label="Business Clients" />
-            <Stat value="10M+" label="Resolutions Processed" />
-            <Stat value="Growing" label="Across India & Beyond" />
-          </div>
-        </div>
+         <div className="mx-auto max-w-7xl px-6 lg:px-10">
+           <div className="grid gap-12 text-center md:grid-cols-2 lg:grid-cols-4">
+            <Stat value="Finance" label="Core Domain" />
+            <Stat value="AI" label="Applied Solutions" />
+            <Stat value="Growth" label="Digital Focus" />
+            <Stat value="Practical" label="Execution Philosophy" />
+           </div>
+         </div>
       </section>
 
       {/* Footer */}
