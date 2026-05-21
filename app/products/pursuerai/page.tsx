@@ -1,3 +1,4 @@
+import { PursuerDashboard } from "@/components/sections/pursuer-dashboard";
 export default function PursuerAIPage() {
   const modules = [
     {
@@ -151,6 +152,8 @@ export default function PursuerAIPage() {
           </div>
         </div>
       </section>
+
+    <PursuerDashboard />
 
       {/* Use Cases */}
       <section className="bg-slate-50 py-20">
