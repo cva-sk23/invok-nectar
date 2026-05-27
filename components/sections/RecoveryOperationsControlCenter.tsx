@@ -2,6 +2,11 @@ import { AllocationOverview } from "@/components/recovery/allocation-overview";
 import { SettlementWorkflow } from "@/components/recovery/settlement-workflow";
 import { AgentProductivityBoard } from "@/components/recovery/agent-productivity-board";
 import { PtpTracker } from "@/components/recovery/ptp-tracker";
+import { FieldVisitTracker } from "@/components/recovery/field-visit-tracker";
+import { RecoveryIntelligenceVault } from "@/components/recovery/recovery-intelligence-vault";
+import { ExecutiveRecoveryDashboard } from "@/components/recovery/executive-recovery-dashboard";
+import { DispositionWorkflowEngine } from "@/components/recovery/disposition-workflow-engine";
+import { RoleBasedOperationsSystem } from "@/components/recovery/role-based-operations-system";
 
 export function RecoveryOperationsControlCenter() {
   return (
@@ -33,6 +38,17 @@ export function RecoveryOperationsControlCenter() {
         <AgentProductivityBoard />
 
         <PtpTracker />
+
+        <FieldVisitTracker />
+
+        <RecoveryIntelligenceVault />
+
+        <ExecutiveRecoveryDashboard />
+
+        <DispositionWorkflowEngine />
+
+        <RoleBasedOperationsSystem />
+
       </div>
     </section>
   );
