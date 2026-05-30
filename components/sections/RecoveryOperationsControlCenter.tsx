@@ -7,6 +7,7 @@ import { RecoveryIntelligenceVault } from "@/components/recovery/recovery-intell
 import { ExecutiveRecoveryDashboard } from "@/components/recovery/executive-recovery-dashboard";
 import {DispositionWorkflowEngine }from "@/components/recovery/disposition-workflow-engine";
 import { RoleBasedOperationsSystem } from "@/components/recovery/role-based-operations-system";
+import { PerformanceReviewMonitoringCenter } from "@/components/recovery/performance-review-monitoring-center";
 
 export function RecoveryOperationsControlCenter() {
   return (
@@ -48,6 +49,8 @@ export function RecoveryOperationsControlCenter() {
         <DispositionWorkflowEngine />
 
         <RoleBasedOperationsSystem />
+
+        <PerformanceReviewMonitoringCenter />
 
       </div>
     </section>
