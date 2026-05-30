@@ -1,0 +1,169 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Allocation {
+  id                 String   @id @default(cuid())
+
+  lender             String
+  accountNumber      String
+  customerName       String
+
+  mobileNumber       String?
+  alternateNumber    String?
+
+  city               String?
+  state              String?
+
+  dpd                Int?
+
+  allocatedMonth     String?
+
+  executiveName      String?
+  teamLeader         String?
+  floorManager       String?
+
+  retainedCase       Boolean  @default(false)
+
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+}
+
+model ContactRecord {
+  id                String   @id @default(cuid())
+
+  customerName      String
+  accountNumber     String
+
+  primaryNumber     String?
+  alternateNumber   String?
+
+  contactStatus     String?
+
+  executiveName     String?
+  teamLeader        String?
+
+  remarks           String?
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model RecoveryCase {
+  id                String   @id @default(cuid())
+
+  accountNumber     String   @unique
+  customerName      String
+
+  disposition       String?
+
+  ptpAmount         Float?
+  ptpDate           DateTime?
+
+  pdcAmount         Float?
+  pdcDate           DateTime?
+
+  partPayment       Float?
+
+  settlementRaised  Boolean  @default(false)
+  settlementAmount  Float?
+
+  executiveName     String?
+  teamLeader        String?
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model SettlementCase {
+  id                  String   @id @default(cuid())
+
+  accountNumber       String
+  customerName        String
+
+  settlementAmount    Float
+  negotiatedAmount    Float?
+
+  approvalStatus      String?
+
+  approvalRemarks     String?
+
+  approvedBy          String?
+
+  settlementDate      DateTime?
+
+  executiveName       String?
+  teamLeader          String?
+  floorManager        String?
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
+
+model CollectionTransaction {
+  id                String   @id @default(cuid())
+
+  accountNumber     String
+  customerName      String
+
+  amountCollected   Float
+
+  collectionDate    DateTime
+
+  paymentMode       String?
+
+  referenceNumber   String?
+
+  executiveName     String?
+  teamLeader        String?
+  floorManager      String?
+
+  remarks           String?
+
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+}
+
+model IntelligenceRecord {
+  id                  String   @id @default(cuid())
+
+  accountNumber       String?
+  customerName        String?
+
+  intelligenceType    String
+
+  source              String?
+
+  mobileNumber        String?
+  alternateNumber     String?
+
+  address             String?
+  officeAddress       String?
+
+  employer            String?
+  uanNumber           String?
+
+  upiId               String?
+  bankAccount         String?
+
+  relationshipType    String?
+  relatedPerson       String?
+
+  remarks             String?
+
+  collectedBy         String?
+  verifiedBy          String?
+
+  createdAt           DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+}
